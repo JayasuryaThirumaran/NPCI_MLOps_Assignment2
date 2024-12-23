@@ -1,8 +1,8 @@
 import gradio as gr
 import math
 import numpy as np
-import sympy as sp
 from scipy import integrate
+import sympy as sp
 
 # Function for performing calculations
 def calculator(a, b, operation):
@@ -41,12 +41,7 @@ def calculator(a, b, operation):
         elif operation == "integrate":
             # Simple integration example using scipy
             result = integrate.quad(lambda x: x ** 2, 0, a)  # Integrate x^2 from 0 to a
-            result = result[0]  # Take the result from the tuple       
-        elif operation == "sympy_eq":
-            # Symbolic equation solving using sympy
-            x = sp.symbols('x')
-            equation = sp.Eq(x**2 - a, 0)
-            result = sp.solve(equation, x)
+            result = result[0]  # Take the result from the tuple
         else:
             return "Invalid operation"
         
@@ -63,17 +58,18 @@ with gr.Blocks() as demo:
     operation_input = gr.Radio(
         [
             "add", "subtract", "multiply", "divide", "modulus", "exponentiate", 
-            "sqrt", "sin", "cos", "tan", "log", "integrate", "plot", "sympy_eq"
+            "sqrt", "sin", "cos", "tan", "log", "integrate"
         ],
         label="Operation"
     )
     result_output = gr.Textbox(label="Result")
-    image_output = gr.Image(label="Plot Image", visible=False)
     calculate_button = gr.Button("Calculate")
     
+    # Display result
     calculate_button.click(calculator, inputs=[a_input, b_input, operation_input], 
-                           outputs=[result_output, image_output])
+                           outputs=[result_output])
 
 # Launch the Gradio app
 if __name__ == "__main__":
     demo.launch(server_name="0.0.0.0", server_port=5000)
+

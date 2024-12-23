@@ -27,9 +27,10 @@ The Dockerfile should:
    - Install the dependencies using pip install -r requirements.txt.
    - Expose the required port (e.g., 5000 for Gradio apps).
    - Run the calculator.py script.
-4.Build the docker image and run a container.
 
-5.Test the calculator.
+4. Build the docker image and run a container.
+
+5. Test the calculator.
 
 
 Note:

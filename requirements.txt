@@ -1,5 +1,5 @@
-gradio==3.39.0
-numpy==1.24.0
-scipy==1.10.0
-sympy==1.11.1
+gradio
+numpy
+pandas
+statistics
 

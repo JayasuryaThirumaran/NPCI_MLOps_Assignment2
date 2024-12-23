@@ -28,3 +28,9 @@ The Dockerfile should:
    - Expose the required port (e.g., 5000 for Gradio apps).
    - Run the calculator.py script.
 4.Build the docker image and run a container.
+
+5.Test the calculator.
+
+
+Note:
+  - for testing functions like "sqrt", "sin", "cos", "tan" which takes single input , keep the second number as 0.

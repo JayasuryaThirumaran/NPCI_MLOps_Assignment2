@@ -2,7 +2,6 @@ import gradio as gr
 import math
 import numpy as np
 import sympy as sp
-import matplotlib.pyplot as plt
 from scipy import integrate
 
 # Function for performing calculations

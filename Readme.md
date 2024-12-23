@@ -23,9 +23,9 @@ Create a Dockerfile to containerize the app.
 
 The Dockerfile should:
    - Use a Python base image (e.g., python:3.9-slim).
-   - Copy the calculator.py and requirements.txt files into the container.
+   - Copy the calculator.py, dataset, and requirements.txt files into the container.
    - Install the dependencies using pip install -r requirements.txt.
-   - Expose the required port (e.g., 5000 for Gradio apps).
+   - Expose the required port.
    - Run the calculator.py script.
 
 4. Build the docker image and run a container.
